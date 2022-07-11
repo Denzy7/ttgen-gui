@@ -71,7 +71,7 @@ MainWindow::~MainWindow()
 void MainWindow::updateSessionsLabel()
 {
     char sessionscount[256];
-    snprintf(sessionscount, sizeof(sessionscount), "%lu", sessions.size());
+    snprintf(sessionscount, sizeof(sessionscount), "%u", (uint32_t)sessions.size());
     ui->lblSessionsCount->setText(sessionscount);
 }
 
